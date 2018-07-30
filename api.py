@@ -14,7 +14,7 @@ class MainHandler(tornado.web.RequestHandler):
     def get(self):
         response = {
             "type": "app",
-            "version": "0.3"
+            "version": "0.4"
         }
         self.write(response)
 
