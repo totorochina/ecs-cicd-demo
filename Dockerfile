@@ -47,4 +47,7 @@ COPY api.py /tmp/data/
 # Start process
 CMD ["python", "/tmp/data/api.py"]
 
-EXPOSE 9000
+#EXPOSE 9000
+EXPOSE 80
+#EXPOSE 80
+#EXPOSE 80

@@ -6,14 +6,15 @@ import tornado.options
 import tornado.web
 from tornado.options import define, options
 
-define("port", default=9000, help="run on the given port", type=int)
+#define("port", default=9000, help="run on the given port", type=int)
+define("port", default=80, help="run on the given port", type=int)
 
 class MainHandler(tornado.web.RequestHandler):
     @tornado.gen.coroutine
     def get(self):
         response = {
             "type": "app",
-            "version": "0.3"
+            "version": "0.1"
         }
         self.write(response)
 
