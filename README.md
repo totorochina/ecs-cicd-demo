@@ -1,4 +1,4 @@
-# ecs-cicd-demo
+# Overview
 This demo is to demonstrate how to use Codepipeline to create a pipeline for services on ECS.
 
 Clarification of the files
