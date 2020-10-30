@@ -5,7 +5,9 @@ FROM ubuntu
 RUN apt-get update
  
 # Install python python-pip from ubuntu repository
-RUN apt-get install -y python python-pip unzip && \
+# RUN apt-get install -y python python-pip unzip && \
+#     rm -rf /var/lib/apt/lists/*
+RUN apt-get install -y python3 python3-pip unzip && \
     rm -rf /var/lib/apt/lists/*
  
 #Define the ENV variable
@@ -38,14 +40,14 @@ RUN apt-get install -y python python-pip unzip && \
 #EXPOSE 80 443
 
 # Install tornado
-RUN pip install tornado
+RUN pip3 install tornado
 
 # Copy files
 RUN mkdir -p /tmp/data/
 COPY api.py /tmp/data/
 
 # Start process
-CMD ["python", "/tmp/data/api.py"]
+CMD ["python3", "/tmp/data/api.py"]
 
 #EXPOSE 9000
 EXPOSE 80
